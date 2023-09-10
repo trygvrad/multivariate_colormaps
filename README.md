@@ -33,3 +33,10 @@ This is the **C** version, and therefore has excessive saturation. i.e. when the
 ![](comlormap_plots/3/3VarAddCcompare.png)
 The **A** version (_3VarAddA_) does not exceed sRGB for any combination of the colormaps:
 ![](comlormap_plots/3/3VarAddAcompare.png)
+
+# How to re-generate the colormaps:
+1. run _2-variate.ipynb_ this will generate _2vars.pickle_
+2. run _3-variate.ipynb_ this will generate _3vars.pickle_
+3. run _n-variate.ipynb_ this will generate _nmultivariate_cmaps.pickle_
+4. run _make source file.ipynb_ this will generate __cm_listed_multivar.py_ and _all_multivariate_cmaps.pickle_
+5. optional: run _visualize together.ipynb_ to generate the plots in the readme (and all the other corresponding variants)
