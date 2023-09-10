@@ -2,6 +2,9 @@
 Multivariate colormaps for use in matplotlib.
 The colorbars are designed to combine well in sRGB when used to plot multivariate data, and be perceptually linear.
 
+This repository generates __cm_listed_multivar.py_ which is designed to incorporate directly into the source code of matplotlib in a future PR.
+If you wish to use these colormaps immediately, or in some other application, same colormaps can be found in _all_multivariate_cmaps.pickle_ which contains a dictionary with the names of the colormaps as keys, and the variables are numpy arrays of size 256×3. 
+
 The colorbars exist in additive:
 ![](additive_cmaps.png)
 and subtractive versions:
