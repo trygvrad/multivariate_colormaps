@@ -1,7 +1,7 @@
 # auto-genreated by https://github.com/trygvrad/multivariate_colormaps 
-# date: 2023-09-10
+# date: 2023-09-20
 
-from .colors import ListedColormap
+from .colors import ListedColormap, MultivarColormap
 _4VarAddA0_data = [[0.000e+00,0.000e+00,0.000e+00],
   [1.080e-04,1.336e-04,1.968e-04],
   [4.106e-04,4.755e-04,6.322e-04],
@@ -43381,3 +43381,42 @@ cmaps = {
         ('8VarSubC6', _4VarSubC3_data),
         ('8VarSubC7', _4VarSubD3_data),
     ]}
+
+cmap_families = {
+    '2VarAddA' : MultivarColormap('2VarAddA', [cmaps['2VarAddA'+str(i)] for i in range(2)],'Add'),
+    '2VarAddB' : MultivarColormap('2VarAddB', [cmaps['2VarAddB'+str(i)] for i in range(2)],'Add'),
+    '2VarSubA' : MultivarColormap('2VarSubA', [cmaps['2VarSubA'+str(i)] for i in range(2)],'Sub'),
+    '2VarSubB' : MultivarColormap('2VarSubB', [cmaps['2VarSubB'+str(i)] for i in range(2)],'Sub'),
+    '3VarAddA' : MultivarColormap('3VarAddA', [cmaps['3VarAddA'+str(i)] for i in range(3)],'Add'),
+    '3VarAddB' : MultivarColormap('3VarAddB', [cmaps['3VarAddB'+str(i)] for i in range(3)],'Add'),
+    '3VarAddC' : MultivarColormap('3VarAddC', [cmaps['3VarAddC'+str(i)] for i in range(3)],'Add'),
+    '3VarAddD' : MultivarColormap('3VarAddD', [cmaps['3VarAddD'+str(i)] for i in range(3)],'Add'),
+    '3VarSubA' : MultivarColormap('3VarSubA', [cmaps['3VarSubA'+str(i)] for i in range(3)],'Sub'),
+    '3VarSubB' : MultivarColormap('3VarSubB', [cmaps['3VarSubB'+str(i)] for i in range(3)],'Sub'),
+    '3VarSubC' : MultivarColormap('3VarSubC', [cmaps['3VarSubC'+str(i)] for i in range(3)],'Sub'),
+    '3VarSubD' : MultivarColormap('3VarSubD', [cmaps['3VarSubD'+str(i)] for i in range(3)],'Sub'),
+    '4VarAddA' : MultivarColormap('4VarAddA', [cmaps['4VarAddA'+str(i)] for i in range(4)],'Add'),
+    '4VarAddB' : MultivarColormap('4VarAddB', [cmaps['4VarAddB'+str(i)] for i in range(4)],'Add'),
+    '4VarAddC' : MultivarColormap('4VarAddC', [cmaps['4VarAddC'+str(i)] for i in range(4)],'Add'),
+    '4VarAddD' : MultivarColormap('4VarAddD', [cmaps['4VarAddD'+str(i)] for i in range(4)],'Add'),
+    '4VarSubA' : MultivarColormap('4VarSubA', [cmaps['4VarSubA'+str(i)] for i in range(4)],'Sub'),
+    '4VarSubB' : MultivarColormap('4VarSubB', [cmaps['4VarSubB'+str(i)] for i in range(4)],'Sub'),
+    '4VarSubC' : MultivarColormap('4VarSubC', [cmaps['4VarSubC'+str(i)] for i in range(4)],'Sub'),
+    '4VarSubD' : MultivarColormap('4VarSubD', [cmaps['4VarSubD'+str(i)] for i in range(4)],'Sub'),
+    '5VarAddA' : MultivarColormap('5VarAddA', [cmaps['5VarAddA'+str(i)] for i in range(5)],'Add'),
+    '5VarAddC' : MultivarColormap('5VarAddC', [cmaps['5VarAddC'+str(i)] for i in range(5)],'Add'),
+    '5VarSubA' : MultivarColormap('5VarSubA', [cmaps['5VarSubA'+str(i)] for i in range(5)],'Sub'),
+    '5VarSubC' : MultivarColormap('5VarSubC', [cmaps['5VarSubC'+str(i)] for i in range(5)],'Sub'),
+    '6VarAddA' : MultivarColormap('6VarAddA', [cmaps['6VarAddA'+str(i)] for i in range(6)],'Add'),
+    '6VarAddC' : MultivarColormap('6VarAddC', [cmaps['6VarAddC'+str(i)] for i in range(6)],'Add'),
+    '6VarSubA' : MultivarColormap('6VarSubA', [cmaps['6VarSubA'+str(i)] for i in range(6)],'Sub'),
+    '6VarSubC' : MultivarColormap('6VarSubC', [cmaps['6VarSubC'+str(i)] for i in range(6)],'Sub'),
+    '7VarAddA' : MultivarColormap('7VarAddA', [cmaps['7VarAddA'+str(i)] for i in range(7)],'Add'),
+    '7VarAddC' : MultivarColormap('7VarAddC', [cmaps['7VarAddC'+str(i)] for i in range(7)],'Add'),
+    '7VarSubA' : MultivarColormap('7VarSubA', [cmaps['7VarSubA'+str(i)] for i in range(7)],'Sub'),
+    '7VarSubC' : MultivarColormap('7VarSubC', [cmaps['7VarSubC'+str(i)] for i in range(7)],'Sub'),
+    '8VarAddA' : MultivarColormap('8VarAddA', [cmaps['8VarAddA'+str(i)] for i in range(8)],'Add'),
+    '8VarAddC' : MultivarColormap('8VarAddC', [cmaps['8VarAddC'+str(i)] for i in range(8)],'Add'),
+    '8VarSubA' : MultivarColormap('8VarSubA', [cmaps['8VarSubA'+str(i)] for i in range(8)],'Sub'),
+    '8VarSubC' : MultivarColormap('8VarSubC', [cmaps['8VarSubC'+str(i)] for i in range(8)],'Sub'),
+    }
