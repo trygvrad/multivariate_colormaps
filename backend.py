@@ -3,6 +3,38 @@ import colorspacious
 import matplotlib.pyplot as plt
 colorspace = 'CAM02-LCD'
 
+
+def get_colormap_from_CAM02(J = [95,128.5], r = 33.0, l=256, rot = 0, gamma = 1, sat_gamma = 1):
+    '''
+    Generates am rgb colormap of (l,l,3) that attempts to keep a constant lightness in the CAM02-LCD colorspace
+    The colormap is based on the a-b plane of the Jab colorspace for a constant J.
+
+    Args:
+        J: (lighness) tuple of 2 floats, default [95,128.5] defining the range of lightness for the colormap, default 95,
+            max range of J approximately 1 to 128.5
+        r: float, default 33.0, the saturation (radius) of the endpoint.
+        l: int, default 256. Size of the colormap.
+        rot: rotation of the hues on the a-b plane, in degrees
+
+    returns:
+        a (l,l,3) numpy array of rgb values
+    '''
+
+    sat = (np.linspace(0, 1, l)**sat_gamma) * r
+    J = (np.linspace(0, 1, l)**gamma) * (J[1]-J[0]) + J[0]
+    Jab = np.zeros((l,3))
+    Jab[:,1] = sat * np.sin(rot*np.pi/180)
+    Jab[:,2] = sat * np.cos(rot*np.pi/180)
+    Jab[:,0] = J
+    rgb = colorspacious.cspace_convert(Jab, colorspace, "sRGB1")
+
+
+    rgb[rgb[:,:]<0] = 0
+    rgb[rgb[:,:]>1] = 1
+
+    #print(r)
+    return rgb
+
 def set_ab_rot(Jab, ar, br, rot, sat_gamma):
     '''
     sets the [:,:,1] and [:,:,2] axes of a Jab colormap to ar and br
